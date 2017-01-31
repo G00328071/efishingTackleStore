@@ -17,21 +17,28 @@ public class HomeController {
     private ProductDao productDao = new ProductDao();
 
     @RequestMapping("/")
-    public String home(){
+    public String home() {
         return "home";
     }
 
+
     @RequestMapping("/productList")
-    public String getProducts(Model model){
-        List<Product> productList = productDao.getProductList();
-        Product product = productList.get(0);
+    public String getProducts(Model model) {
+        List<Product> products = productDao.getProductList();
+
         //once we create the product
         //we bind the product to the model
-        model.addAttribute(product);
+        model.addAttribute("products", products);
 
         // when this view is returned the model well be bound to the view
         return "productList";
 
     }
 
-}
+    @RequestMapping("/productList/viewProduct")
+    public String viewProduct() {
+        return "viewProduct";
+    }
+
+
+}//class end
