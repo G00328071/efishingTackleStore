@@ -4,6 +4,8 @@ package com.eFishingTackleStore.model;
  * Created by Alan Doyle on 28/01/2017.
  */
 public class Product {
+
+    private String productID;
     private String productName;
     private String productCategory;
     private String productDescription;
@@ -13,6 +15,13 @@ public class Product {
     private int unitInStock;
     private String productManufacturer;
 
+    public String getProductID() {
+        return productID;
+    }
+
+    public void setProductID(String productID) {
+        this.productID = productID;
+    }
 
     public String getProductName() {
         return productName;
