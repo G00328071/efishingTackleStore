@@ -1,10 +1,26 @@
 package com.eFishingTackleStore.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by Alan Doyle on 28/01/2017.
  */
-public class Product {
 
+//@Entity => tells spring, that this is the entity that we want to store in the
+//database. Each instance of the Product class represents a row(tuple)
+// in the database table.
+//@GeneratedValue(strategy = GenerationType.AUTO)
+//this means when an instance /row is created its product Id is auto generated in sequence.
+
+@Entity
+public class Product {
+    //Id defines the primary key in the view(table)
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String productID;
     private String productName;
     private String productCategory;

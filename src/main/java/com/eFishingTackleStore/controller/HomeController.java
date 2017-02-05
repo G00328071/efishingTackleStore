@@ -2,6 +2,7 @@ package com.eFishingTackleStore.controller;
 
 import com.eFishingTackleStore.dao.ProductDao;
 import com.eFishingTackleStore.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,9 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    private ProductDao productDao = new ProductDao();
+    @Autowired
+    private ProductDao productDao;
+
 
     @RequestMapping("/")
     public String home() {
@@ -26,7 +29,7 @@ public class HomeController {
 
     @RequestMapping("/productList")
     public String getProducts(Model model) {
-        List<Product> products = productDao.getProductList();
+        List<Product> products = productDao.getAllProducts();
 
         //once we create the product
         //we bind the product to the model
