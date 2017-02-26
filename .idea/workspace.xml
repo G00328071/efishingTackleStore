@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f818529d-c3f0-4e26-8dd7-019e4d2de659" name="Default" comment="set up database envoirnment/hibernate">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productInventory.jsp" />
+    <list default="true" id="f818529d-c3f0-4e26-8dd7-019e4d2de659" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eFishingTackleStore/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/eFishingTackleStore/controller/HomeController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -934,7 +929,7 @@
       <workItem from="1486379205833" duration="366000" />
       <workItem from="1486400213455" duration="671000" />
       <workItem from="1487769202116" duration="337000" />
-      <workItem from="1488108541485" duration="10539000" />
+      <workItem from="1488108541485" duration="10654000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1485726325501</created>
@@ -985,11 +980,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488109458228</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Create/Deleate  a product">
+      <created>1488129718808</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1488129718808</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70045000" />
+    <option name="totallyTimeSpent" value="70160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2618" y="29" width="1520" height="1038" extended-state="0" />
@@ -1045,7 +1047,8 @@
     <MESSAGE value="second Commit" />
     <MESSAGE value="develop product pages" />
     <MESSAGE value="set up database envoirnment/hibernate" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up database envoirnment/hibernate" />
+    <MESSAGE value="Create/Deleate  a product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create/Deleate  a product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
