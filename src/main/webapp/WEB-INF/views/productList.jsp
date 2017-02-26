@@ -9,9 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@include file="/WEB-INF/views/template/header.jsp"%>
+<%@include file="/WEB-INF/views/template/header.jsp" %>
 
 <div class="container-wrapper">
     <div class="container">
@@ -27,8 +27,8 @@
             <thead>
             <tr class="bg-success">
                 <th>Photo Thumb</th>
-                <th>Product Name</th>
-                <th>Category</th>
+                <th>Manufacturer</th>
+                <th>Discription</th>
                 <th>Condition</th>
                 <th>Price</th>
                 <th></th>
@@ -38,8 +38,9 @@
                 <tr>
 
                     <td><img src="#" alt="image"/></td>
+                    <td>${product.productManufacturer}</td>
+
                     <td>${product.productName}</td>
-                    <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>€${product.productPrice}</td>
                     <td><a href="<spring:url value="/productList/viewProduct/${product.productID}"/>"
@@ -51,4 +52,4 @@
         </table>
 
 
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+        <%@include file="/WEB-INF/views/template/footer.jsp" %>
