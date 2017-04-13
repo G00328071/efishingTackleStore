@@ -37,7 +37,7 @@
             <c:forEach items="${products}" var="product">
                 <tr>
 
-                    <td><img src="#" alt="image"/></td>
+                    <td><img src="<c:url value="/resources/images/${product.productID}.png"/> " alt="image" style="width:30%"/></td>
                     <td>${product.productManufacturer}</td>
 
                     <td>${product.productName}</td>
@@ -45,8 +45,13 @@
                     <td>€${product.productPrice}</td>
                     <td><a href="<spring:url value="/productList/viewProduct/${product.productID}"/>"
                     ><span class="glyphicon glyphicon-info-sign"></span></a>
+                        <!--  delete button on the procuct inventory page => back to the controller -->
                         <a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productID}"/>"
                         ><span class="glyphicon glyphicon-remove-circle"></span></a>
+
+                        <!--  edit icon pencil button  on the procuct inventory page => to the controller -->
+                        <a href="<spring:url value="/admin/productInventory/editProduct/${product.productID}"/>"
+                        ><span class="glyphicon glyphicon-pencil"></span></a>
 
                     </td>
 
