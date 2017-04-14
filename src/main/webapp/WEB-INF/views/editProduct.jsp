@@ -15,18 +15,24 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Add Product</h1>
+            <h1>Edit Product Details</h1>
 
 
-            <p class="lead">Fill in the below information to add a product:</p>
+            <p class="lead">Please Update Product Details</p>
 
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/productInventory/addProduct" method="post"
+        <form:form action="${pageContext.request.contextPath}/admin/productInventory/editProduct" method="post"
                    commandName="product" enctype="multipart/form-data">
+
+        <!-- Re submitting the updated product sets the productId to null because the productId already exists   
+        so we set a hidden field  the user won't see it on the page the product Id will be reasigned to the model-->
+        <form:hidden path="productID"  value="${product.productID}"/>
+
+
         <div class="form-group">
             <label for="name">Name</label><form:errors path="productName" cssStyle="color:#c12e2a"/>
-            <form:input path="productName" id="name" class="form-Control"/>
+            <form:input path="productName" id="name" class="form-Control" value="${product.productName}"/>
 
         </div>
         <div class="form-group">
@@ -40,18 +46,18 @@
 
         <div class="form-group">
             <label for="description">description</label>
-            <form:textarea path="productDescription" id="description" class="form-Control"/>
+            <form:textarea path="productDescription" id="description" class="form-Control" value="${product.productDescription}"/>
 
         </div>
         <div class="form-group">
             <label for="price">Price</label><form:errors path="productPrice" cssStyle="color:#c12e2a"/>
-            <form:input path="productPrice" id="price" class="form-Control"/>
+            <form:input path="productPrice" id="price" class="form-Control" value="${product.productPrice}"/>
 
         </div>
         <div class="form-group">
-        <label for="condition">condition</label>
-        <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="New"/>New</label>
-        <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="Used"/>Used</label>
+            <label for="condition">condition</label>
+            <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="New"/>New</label>
+            <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="Used"/>Used</label>
 
         </div>
         <div class="form-group">
@@ -62,12 +68,12 @@
         </div>
         <div class="form-group">
             <label for="unitsInStock">Units In Stock</label><form:errors path="unitInStock" cssStyle="color:#c12e2a"/>
-            <form:input path="unitInStock" id="unitsInStock" class="form-Control"/>
+            <form:input path="unitInStock" id="unitsInStock" class="form-Control" value="${product.unitInStock}"/>
 
         </div>
         <div class="form-group">
             <label for="manufacturer">Manufacturer</label>
-            <form:input path="productManufacturer" id="manufacturer" class="form-Control"/>
+            <form:input path="productManufacturer" id="manufacturer" class="form-Control" value="${product.productManufacturer}"/>
 
         </div>
 
