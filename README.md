@@ -1,2 +1,2 @@
 # efishingTackleStore
-https://github.com/G00328071/efishingTackleStore/wiki
+https://github.com/G00328071/efishingTackleStore/wiki/Introduction
